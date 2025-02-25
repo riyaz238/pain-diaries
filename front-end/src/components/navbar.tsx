@@ -10,9 +10,9 @@ const Navbar = styled.nav`
   align-items: center;
   align-self: center;
   padding: 10px 6%;
-  background: rgba(0, 0, 0, 0.1); /* Semi-transparent dark background */
+  background: rgba(256, 256, 256, 0.1);
   border-radius: 5px;
-  backdrop-filter: blur(2px); /* Optional: Adds a blur effect */
+  backdrop-filter: blur(2px);
   color: black;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 `;
@@ -26,7 +26,7 @@ const Dropdown = styled.div<{ isOpen: boolean }>`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   position: absolute;
   right: 0px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(256, 256, 256, 0.6);
   color: lightGray;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -37,14 +37,15 @@ const Dropdown = styled.div<{ isOpen: boolean }>`
 const DropdownItem = styled.button`
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   text-align: left;
-  background: none;
+  background: transparent;
   border: none;
-  color: grey;
+  border-radius: 10px;
+  color: black;
   cursor: pointer;
   &:hover {
-    background: #f0f0f0;
+    background: transparent;
   }
 `;
 
@@ -73,10 +74,10 @@ const NavbarComponent: React.FC = () => {
             <DropdownItem
               onClick={() => {
                 setIsOpen(false);
-                navigate("/history");
+                navigate("/instructions");
               }}
             >
-              History
+              Instructions
             </DropdownItem>
             <DropdownItem
               onClick={() => {
@@ -85,6 +86,14 @@ const NavbarComponent: React.FC = () => {
               }}
             >
               Add New
+            </DropdownItem>
+            <DropdownItem
+              onClick={() => {
+                setIsOpen(false);
+                navigate("/history");
+              }}
+            >
+              History
             </DropdownItem>
           </Dropdown>
         </UserMenu>

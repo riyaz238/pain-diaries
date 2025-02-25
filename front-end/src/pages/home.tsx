@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import imagebg from "../assets/pain-diary.png";
+import imagebg from "../assets/pain-diary3.png";
 import { useNavigate } from "react-router-dom";
 
 const HomeContainer = styled.div`
@@ -14,7 +14,7 @@ const HomeContainer = styled.div`
 const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.4;
   object-fit: cover;
   position: absolute;
   top: 0;

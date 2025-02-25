@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "@emotion/styled";
-import imagebg from "../assets/pain-diary.png";
+import imagebg from "../assets/pain-diary3.png";
 import {
   BsEmojiSmile,
   BsEmojiWink,
@@ -11,7 +11,6 @@ import {
 } from "react-icons/bs";
 import { PainDiaryEntry } from "../api";
 import { useAddPainDiary } from "../hooks";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const PageContainer = styled.div`
   width: 100vw;
@@ -24,12 +23,12 @@ const PageContainer = styled.div`
 const BackgroundImage = styled.img`
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.1;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Puts the image behind other content */
+  z-index: -1; /* Putting the image behind other content */
 `;
 
 const QuestionSection = styled.div`
@@ -40,10 +39,10 @@ const QuestionSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(256, 256, 256, 0.8); /* Semi-transparent dark background */
+  background: rgba(256, 256, 256, 0.8);
   border-radius: 10px;
   color: black;
-  backdrop-filter: blur(8px); /* Optional: Adds a blur effect */
+  backdrop-filter: blur(8px);
 `;
 
 const QuestionContainer = styled.div`

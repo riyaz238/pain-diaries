@@ -1,18 +1,31 @@
 import React from "react";
 import styled from "@emotion/styled";
+import imagebg from "../assets/pain-diary3.png";
+import PainChartComponent from "../components/painCharts";
 
 const PageContainer = styled.div`
-  width: 90vw;
-  height: 100vh;
+  width: 100vw;
+  height: 90vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
+`;
+
+const BackgroundImage = styled.img`
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Puts the image behind other content */
 `;
 
 const HistoryPage: React.FC = () => (
   <PageContainer>
-    <p>History Page Content</p>
+    <BackgroundImage src={imagebg} alt="Large Background" />
+    <PainChartComponent />
   </PageContainer>
 );
 

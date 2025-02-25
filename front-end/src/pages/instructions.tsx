@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import imagebg from "../assets/pain-diary.png";
+import imagebg from "../assets/pain-diary3.png";
 
 const PageContainer = styled.div`
   width: 100vw;
